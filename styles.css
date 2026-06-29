@@ -354,128 +354,79 @@ h2 {
   grid-column: 1 / -1;
 }
 
-/* === Key Metrics Stair-Step Diagram === */
-.step-diagram-title {
+/* === Key Metrics Status Boxes === */
+.key-metrics-card h3 {
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: 0.02em;
-  margin-bottom: 18px;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.step-diagram {
+.metric-status-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: end;
-  gap: 0;
-  min-height: 310px;
-  padding: 28px 8px 14px;
-  position: relative;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.step-item {
+.metric-status-box {
+  min-height: 145px;
+  padding: 1rem;
+  border-radius: 22px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: stretch;
-  position: relative;
-}
-
-.step-block {
-  width: 100%;
-  display: grid;
-  place-items: center;
-  position: relative;
-  overflow: visible;
-  isolation: isolate;
-  border-radius: 14px 14px 6px 6px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.04)),
-    linear-gradient(180deg, rgba(45, 212, 191, 0.95), rgba(59, 130, 246, 0.78));
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  justify-content: center;
+  gap: .35rem;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .18);
   box-shadow:
-    0 18px 28px rgba(0, 0, 0, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, .18),
+    0 14px 30px rgba(0, 0, 0, .22);
 }
 
-.step-block::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.38), transparent 46%);
-  z-index: -1;
-}
-
-.step-item:not(:last-child) .step-block::after {
-  content: "";
-  position: absolute;
-  right: -16px;
-  bottom: 0;
-  width: 16px;
-  height: 18px;
-  background: rgba(255, 255, 255, 0.16);
-  border-radius: 0 5px 5px 0;
-  z-index: 2;
-}
-
-/* Actual ascending stair heights */
-.step-1 .step-block {
-  height: 74px;
-}
-
-.step-2 .step-block {
-  height: 112px;
-}
-
-.step-3 .step-block {
-  height: 150px;
-}
-
-.step-4 .step-block {
-  height: 195px;
-}
-
-.step-5 .step-block {
-  height: 230px;
-}
-
-.step-block strong {
+.metric-status-box .metric-label {
   color: #ffffff;
-  font-size: 1.55rem;
+  font-size: .8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  opacity: .9;
+}
+
+.metric-status-box strong {
+  color: #ffffff;
+  font-size: 2.35rem;
   font-weight: 950;
-  text-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.9),
-    0 0 12px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .55);
 }
 
-.step-item p {
+.metric-status-box p {
+  margin: 0;
   color: #ffffff;
-  opacity: 1;
-  margin: 10px 4px 0;
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 850;
-  line-height: 1.15;
-  text-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.8),
-    0 0 8px rgba(0, 0, 0, 0.7);
+  font-size: .92rem;
+  font-weight: 750;
+  line-height: 1.25;
+  opacity: .92;
 }
 
-/* === Risk Identification Donut === */
-.donut {
-  width: 210px;
-  height: 210px;
-  margin: 1rem auto;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+.metric-status-box.success {
   background:
-    radial-gradient(circle, #101a33 0 52%, transparent 53%),
-    conic-gradient(var(--green) 0 40%, var(--yellow) 40% 70%, var(--orange) 70% 90%, var(--red) 90% 100%);
-  box-shadow:
-    inset 0 0 24px rgba(0, 0, 0, .38),
-    0 16px 35px rgba(0, 0, 0, .24);
+    linear-gradient(135deg, rgba(37, 211, 102, .34), rgba(255, 255, 255, .06));
+  border-color: rgba(37, 211, 102, .45);
+}
+
+.metric-status-box.warning {
+  background:
+    linear-gradient(135deg, rgba(255, 216, 77, .34), rgba(255, 255, 255, .06));
+  border-color: rgba(255, 216, 77, .45);
+}
+
+.metric-status-box.danger {
+  background:
+    linear-gradient(135deg, rgba(255, 38, 63, .34), rgba(255, 255, 255, .06));
+  border-color: rgba(255, 38, 63, .45);
 }
 
 .donut b {
@@ -657,18 +608,11 @@ h2 {
 }
 
 @media (max-width: 720px) {
-  .step-diagram {
+  .metric-status-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
-    min-height: auto;
   }
 
-  .step-block {
-    height: auto !important;
-    min-height: 82px;
-  }
-
-  .step-item p {
-    margin-top: 8px;
+  .metric-status-box {
+    min-height: 125px;
   }
 }
