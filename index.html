@@ -68,56 +68,69 @@
       </div>
     </section>
 
-    <section id="effectiveness" class="section-pad dashboard-grid">
-<h3 class="step-diagram-title">Key Metrics</h3>
+<section id="effectiveness" class="section-pad dashboard-grid">
+  <div class="glass chart-card">
+    <h3 class="step-diagram-title">Key Metrics</h3>
 
-<div class="step-diagram">
-  <div class="step-item step-1">
-    <div class="step-block">
-      <strong>35%</strong>
+    <div class="step-diagram">
+      <div class="step-item step-1">
+        <div class="step-block">
+          <strong>35%</strong>
+        </div>
+        <p>Data migration</p>
+      </div>
+
+      <div class="step-item step-2">
+        <div class="step-block">
+          <strong>42%</strong>
+        </div>
+        <p>Vendor control</p>
+      </div>
+
+      <div class="step-item step-3">
+        <div class="step-block">
+          <strong>48%</strong>
+        </div>
+        <p>Integration</p>
+      </div>
+
+      <div class="step-item step-4">
+        <div class="step-block">
+          <strong>68%</strong>
+        </div>
+        <p>User adoption</p>
+      </div>
+
+      <div class="step-item step-5">
+        <div class="step-block">
+          <strong>76%</strong>
+        </div>
+        <p>Security</p>
+      </div>
     </div>
-    <p>Data migration</p>
   </div>
 
-  <div class="step-item step-2">
-    <div class="step-block">
-      <strong>42%</strong>
+  <div class="glass chart-card">
+    <h3>Risk Identification Quality</h3>
+    <div class="donut risk-quality-donut" aria-label="Risk identification quality chart">
+      <b>40%</b>
+      <small>Appropriate</small>
     </div>
-    <p>Vendor control</p>
+    <p>Only four of ten original risks were clearly appropriate; several high-impact risks were missed, underestimated, or too broad for targeted mitigation.</p>
   </div>
 
-  <div class="step-item step-3">
-    <div class="step-block">
-      <strong>48%</strong>
+  <div class="glass chart-card wide">
+    <h3>Escalation Thresholds</h3>
+    <div class="thresholds donut-thresholds">
+      <div class="threshold-donut" style="--pct:75%; --accent: var(--red)"><b>150+</b><span>duplicate records</span></div>
+      <div class="threshold-donut" style="--pct:10%; --accent: var(--orange)"><b>10%</b><span>interface test failures</span></div>
+      <div class="threshold-donut" style="--pct:70%; --accent: var(--yellow)"><b>70%</b><span>minimum vendor capacity</span></div>
+      <div class="threshold-donut" style="--pct:70%; --accent: var(--yellow)"><b>70%</b><span>minimum training completion</span></div>
+      <div class="threshold-donut" style="--pct:100%; --accent: var(--green)"><b>0</b><span>high-risk security incidents</span></div>
+      <div class="threshold-donut" style="--pct:70%; --accent: var(--cyan)"><b>7/10</b><span>physician readiness score</span></div>
     </div>
-    <p>Integration</p>
   </div>
-
-  <div class="step-item step-4">
-    <div class="step-block">
-      <strong>68%</strong>
-    </div>
-    <p>User adoption</p>
-  </div>
-
-  <div class="step-item step-5">
-    <div class="step-block">
-      <strong>76%</strong>
-    </div>
-    <p>Security</p>
-  </div>
-</div>
-
-      <div class="glass chart-card"><h3>Risk Identification Quality</h3><div class="donut" aria-label="Risk identification quality chart"><b>40%</b><small>Appropriate</small></div><p>Only four of ten original risks were clearly appropriate; several high-impact risks were missed, underestimated, or too broad for targeted mitigation.</p></div>
-      <div class="glass chart-card wide"><h3>Escalation Thresholds</h3><div class="thresholds donut-thresholds">
-        <div class="threshold-donut" style="--pct:75%; --accent: var(--red)"><b>150+</b><span>duplicate records</span></div>
-        <div class="threshold-donut" style="--pct:10%; --accent: var(--orange)"><b>10%</b><span>interface test failures</span></div>
-        <div class="threshold-donut" style="--pct:70%; --accent: var(--yellow)"><b>70%</b><span>minimum vendor capacity</span></div>
-        <div class="threshold-donut" style="--pct:70%; --accent: var(--yellow)"><b>70%</b><span>minimum training completion</span></div>
-        <div class="threshold-donut" style="--pct:100%; --accent: var(--green)"><b>0</b><span>high-risk security incidents</span></div>
-        <div class="threshold-donut" style="--pct:70%; --accent: var(--cyan)"><b>7/10</b><span>physician readiness score</span></div>
-      </div></div>
-    </section>
+</section>
 
     <section id="monitoring" class="section-pad">
       <div class="section-heading"><p class="eyebrow">Monitoring Analysis</p><h2>Monthly reports were not enough for fast-moving EHR risk.</h2></div>
