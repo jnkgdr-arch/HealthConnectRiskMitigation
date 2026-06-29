@@ -44,22 +44,27 @@
 
     <section id="risk-chart" class="section-pad">
       <div class="section-heading"><p class="eyebrow">Gradient Heat Map</p><h2>Risk severity deepens from green to yellow, orange, and red.</h2></div>
-      <div class="legend glass"><span><i class="low"></i>Low</span><span><i class="medium"></i>Medium</span><span><i class="high"></i>High</span><span><i class="critical"></i>Critical</span></div>
-      <div class="heatmap glass" role="table" aria-label="HealthConnect risk heat map">
-        <div class="hm-head">Risk ID</div><div class="hm-head">Primary Risk / Event</div><div class="hm-head">Owner</div><div class="hm-head">Metric</div><div class="hm-head">Status</div>
-        <div class="risk-cell low">R001</div><div>User resistance; physician readiness concerns</div><div>Clinical Champions</div><div>Readiness score & adoption</div><div class="pill low">Low</div>
-        <div class="risk-cell critical">R002</div><div>Data migration errors; duplicate and inconsistent records</div><div>Data Migration Lead</div><div>Duplicate records & error rate</div><div class="pill critical">Critical</div>
-        <div class="risk-cell high">R003</div><div>Vendor delays; 4-week extension and reduced vendor team</div><div>Project Manager</div><div>Capacity utilization</div><div class="pill high">High</div>
-        <div class="risk-cell medium">R004</div><div>Insufficient training time</div><div>Training Lead</div><div>Completion rate</div><div class="pill medium">Medium</div>
-        <div class="risk-cell medium">R005</div><div>System performance issues</div><div>Infrastructure Lead</div><div>Uptime and latency</div><div class="pill medium">Medium</div>
-        <div class="risk-cell critical">R006</div><div>Budget overrun by 38%</div><div>Executive Sponsor</div><div>Budget variance</div><div class="pill critical">Critical</div>
-        <div class="risk-cell critical">R007</div><div>Persistent radiology integration failures</div><div>Integration Lead</div><div>Interface failure count</div><div class="pill critical">Critical</div>
-        <div class="risk-cell medium">R008</div><div>Three key IT personnel departed</div><div>IT Director</div><div>Coverage gaps</div><div class="pill medium">Medium</div>
-        <div class="risk-cell high">R009</div><div>Regulatory compliance gaps and audit exposure</div><div>Compliance Officer</div><div>Audit findings</div><div class="pill high">High</div>
-        <div class="risk-cell medium">R010</div><div>Network security vulnerabilities</div><div>Security Manager</div><div>High-risk incidents</div><div class="pill medium">Medium</div>
-        <div class="risk-cell high">R011</div><div>Legacy system documentation gaps</div><div>IT Director</div><div>Unknown interface count</div><div class="pill high">High</div>
-        <div class="risk-cell high">R012</div><div>Regulatory audit scheduled during go-live</div><div>Compliance Officer</div><div>Audit readiness</div><div class="pill high">High</div>
-        <div class="risk-cell high">R013</div><div>Physician champions concerned about readiness</div><div>Change Manager</div><div>Readiness score</div><div class="pill high">High</div>
+      <div class="heatmap-layout">
+        <div class="risk-matrix glass" aria-label="HealthConnect risk heat map matrix">
+          <article class="risk-box low"><strong>R001</strong><span>User resistance; physician readiness concerns</span><small><b>Owner:</b> Clinical Champions</small><small><b>Metric:</b> Readiness score & adoption</small><em>Low</em></article>
+          <article class="risk-box critical"><strong>R002</strong><span>Data migration errors; duplicate and inconsistent records</span><small><b>Owner:</b> Data Migration Lead</small><small><b>Metric:</b> Duplicate records & error rate</small><em>Critical</em></article>
+          <article class="risk-box high"><strong>R003</strong><span>Vendor delays; 4-week extension and reduced vendor team</span><small><b>Owner:</b> Project Manager</small><small><b>Metric:</b> Capacity utilization</small><em>High</em></article>
+          <article class="risk-box medium"><strong>R004</strong><span>Insufficient training time</span><small><b>Owner:</b> Training Lead</small><small><b>Metric:</b> Completion rate</small><em>Medium</em></article>
+          <article class="risk-box medium"><strong>R005</strong><span>System performance issues</span><small><b>Owner:</b> Infrastructure Lead</small><small><b>Metric:</b> Uptime and latency</small><em>Medium</em></article>
+          <article class="risk-box critical"><strong>R006</strong><span>Budget overrun by 38%</span><small><b>Owner:</b> Executive Sponsor</small><small><b>Metric:</b> Budget variance</small><em>Critical</em></article>
+          <article class="risk-box critical"><strong>R007</strong><span>Persistent radiology integration failures</span><small><b>Owner:</b> Integration Lead</small><small><b>Metric:</b> Interface failure count</small><em>Critical</em></article>
+          <article class="risk-box medium"><strong>R008</strong><span>Three key IT personnel departed</span><small><b>Owner:</b> IT Director</small><small><b>Metric:</b> Coverage gaps</small><em>Medium</em></article>
+          <article class="risk-box high"><strong>R009</strong><span>Regulatory compliance gaps and audit exposure</span><small><b>Owner:</b> Compliance Officer</small><small><b>Metric:</b> Audit findings</small><em>High</em></article>
+          <article class="risk-box medium"><strong>R010</strong><span>Network security vulnerabilities</span><small><b>Owner:</b> Security Manager</small><small><b>Metric:</b> High-risk incidents</small><em>Medium</em></article>
+          <article class="risk-box high"><strong>R011</strong><span>Legacy system documentation gaps</span><small><b>Owner:</b> IT Director</small><small><b>Metric:</b> Unknown interface count</small><em>High</em></article>
+          <article class="risk-box high"><strong>R012</strong><span>Regulatory audit scheduled during go-live</span><small><b>Owner:</b> Compliance Officer</small><small><b>Metric:</b> Audit readiness</small><em>High</em></article>
+          <article class="risk-box high"><strong>R013</strong><span>Physician champions concerned about system readiness</span><small><b>Owner:</b> Change Manager</small><small><b>Metric:</b> Readiness score</small><em>High</em></article>
+        </div>
+        <aside class="heat-gauge glass" aria-label="Heat map severity gauge">
+          <h3>Severity Gauge</h3>
+          <div class="gauge-bar"><span>Low</span><span>Medium</span><span>High</span><span>Critical</span></div>
+          <p>The matrix transitions from green for lower exposure to yellow, orange, and deepest red for critical risks requiring immediate escalation.</p>
+        </aside>
       </div>
     </section>
 
