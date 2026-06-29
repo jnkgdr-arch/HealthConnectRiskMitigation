@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HealthConnect Risk Mitigation Effectiveness Evaluation</title>
+  <meta name="description" content="A chart-heavy evaluation dashboard for the HealthConnect EHR risk mitigation case study." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora"></div>
+  <nav class="top-nav" aria-label="Primary navigation">
+    <a class="brand" href="#home">HealthConnect RiskLab</a>
+    <div class="nav-links">
+      <a href="#overview">Overview</a><a href="#risk-chart">Risk Heat Map</a><a href="#effectiveness">Effectiveness</a><a href="#monitoring">Monitoring</a><a href="#recommendations">Recommendations</a><a href="#references">References</a>
+    </div>
+  </nav>
+
+  <header id="home" class="hero two-column section-pad">
+    <div class="hero-copy glass">
+      <p class="eyebrow">Janelle Gardner</p>
+      <h1>HealthConnect EHR: Risk Mitigation Effectiveness</h1>
+      <p class="subtitle">A data-rich, executive-ready site for the HealthConnect EHR implementation, focused on what was identified, what occurred, where responses failed, and how future risk management can become more proactive.</p>
+      <div class="meta-grid">
+        <span><strong>Course/Professor</strong> UMGC IFSM 438 6381 • Professor Steph. Head</span><span><strong>Date</strong> 09/02/2025</span><span><strong>Program</strong> EHR Implementation</span>
+      </div>
+    </div>
+    <div class="hero-asset glass">
+      <img src="assets/healthconnect-ehr.jpeg" alt="HealthConnect EHR dashboard illustration" />
+      <div class="asset-badge">Real-time Risk Dashboard</div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section-pad">
+      <div class="section-heading"><p class="eyebrow">Executive Summary</p><h2>Risk controls existed, but critical threats escalated before intervention.</h2></div>
+      <div class="cards three key-metric-textboxes">
+        <article class="glass metric-text"><h3>Duplicate Records</h3><p>Initial migration planning underestimated duplicate patient-record cleanup and manual validation requirements.</p></article>
+        <article class="glass metric-text"><h3>Budget Pressure</h3><p>Data, vendor, and integration issues compounded into a significant budget-overrun risk.</p></article>
+        <article class="glass metric-text"><h3>Workflow Risk</h3><p>End-user testing surfaced critical workflow issues that affected clinical readiness and patient-safety confidence.</p></article>
+      </div>
+      <section class="current-status glass" aria-labelledby="current-migration-status">
+        <div class="section-heading compact"><p class="eyebrow">Live Snapshot</p><h2 id="current-migration-status">Current Migration Status</h2></div>
+        <div class="status-grid">
+          <article class="status-card"><span>Duplication migration errors</span><strong>850</strong><div class="status-meter danger" style="--value:85%"></div></article>
+          <article class="status-card"><span>Training completion</span><strong>78%</strong><div class="status-meter good" style="--value:78%"></div></article>
+          <article class="status-card"><span>Physician concerns/complaints</span><strong>6/10</strong><div class="status-meter warning" style="--value:60%"></div></article>
+          <article class="status-card"><span>Number of incidents</span><strong>0%</strong><div class="status-meter good" style="--value:0%"></div></article>
+          <article class="status-card"><span>Vendor capacity/engagement</span><strong>66%</strong><div class="status-meter warning" style="--value:66%"></div></article>
+          <article class="status-card"><span>Integration failures</span><strong>12%</strong><div class="status-meter danger" style="--value:12%"></div></article>
+        </div>
+      </section>
+      <div class="glass narrative"><p>The HealthConnect EHR project used a risk register, monthly reviews, and escalation procedures, but several risks were underestimated or handled reactively. Data migration errors, integration failures, vendor resource shortfalls, and unclear communication delayed response and reduced clinical stakeholder visibility. Future implementations need earlier frontline involvement, enforceable vendor accountability, real-time dashboards, automated escalation thresholds, and balanced technical and stakeholder effectiveness metrics.</p></div>
+    </section>
+
+    <section id="risk-chart" class="section-pad">
+      <div class="section-heading"><p class="eyebrow">Gradient Heat Map</p><h2>Risk severity deepens from green to yellow, orange, and red.</h2></div>
+      <div class="heatmap-layout">
+        <div class="risk-matrix glass" aria-label="HealthConnect risk heat map matrix">
+          <article class="risk-box low"><strong>R001</strong><span>User resistance; physician readiness concerns</span><small><b>Owner:</b> Clinical Champions</small><small><b>Metric:</b> Readiness score & adoption</small><em>Low</em></article>
+          <article class="risk-box critical"><strong>R002</strong><span>Data migration errors; duplicate and inconsistent records</span><small><b>Owner:</b> Data Migration Lead</small><small><b>Metric:</b> Duplicate records & error rate</small><em>Critical</em></article>
+          <article class="risk-box high"><strong>R003</strong><span>Vendor delays; 4-week extension and reduced vendor team</span><small><b>Owner:</b> Project Manager</small><small><b>Metric:</b> Capacity utilization</small><em>High</em></article>
+          <article class="risk-box medium"><strong>R004</strong><span>Insufficient training time</span><small><b>Owner:</b> Training Lead</small><small><b>Metric:</b> Completion rate</small><em>Medium</em></article>
+          <article class="risk-box medium"><strong>R005</strong><span>System performance issues</span><small><b>Owner:</b> Infrastructure Lead</small><small><b>Metric:</b> Uptime and latency</small><em>Medium</em></article>
+          <article class="risk-box critical"><strong>R006</strong><span>Budget overrun by 38%</span><small><b>Owner:</b> Executive Sponsor</small><small><b>Metric:</b> Budget variance</small><em>Critical</em></article>
+          <article class="risk-box critical"><strong>R007</strong><span>Persistent radiology integration failures</span><small><b>Owner:</b> Integration Lead</small><small><b>Metric:</b> Interface failure count</small><em>Critical</em></article>
+          <article class="risk-box medium"><strong>R008</strong><span>Three key IT personnel departed</span><small><b>Owner:</b> IT Director</small><small><b>Metric:</b> Coverage gaps</small><em>Medium</em></article>
+          <article class="risk-box high"><strong>R009</strong><span>Regulatory compliance gaps and audit exposure</span><small><b>Owner:</b> Compliance Officer</small><small><b>Metric:</b> Audit findings</small><em>High</em></article>
+          <article class="risk-box medium"><strong>R010</strong><span>Network security vulnerabilities</span><small><b>Owner:</b> Security Manager</small><small><b>Metric:</b> High-risk incidents</small><em>Medium</em></article>
+          <article class="risk-box high"><strong>R011</strong><span>Legacy system documentation gaps</span><small><b>Owner:</b> IT Director</small><small><b>Metric:</b> Unknown interface count</small><em>High</em></article>
+          <article class="risk-box high"><strong>R012</strong><span>Regulatory audit scheduled during go-live</span><small><b>Owner:</b> Compliance Officer</small><small><b>Metric:</b> Audit readiness</small><em>High</em></article>
+          <article class="risk-box high"><strong>R013</strong><span>Physician champions concerned about system readiness</span><small><b>Owner:</b> Change Manager</small><small><b>Metric:</b> Readiness score</small><em>High</em></article>
+        </div>
+        <aside class="heat-gauge glass" aria-label="Heat map severity gauge">
+          <h3>Severity Gauge</h3>
+          <div class="gauge-bar"><span>Low</span><span>Medium</span><span>High</span><span>Critical</span></div>
+          <p>The matrix transitions from green for lower exposure to yellow, orange, and deepest red for critical risks requiring immediate escalation.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="effectiveness" class="section-pad dashboard-grid">
+      <div class="glass chart-card"><h3>Response Effectiveness by Domain</h3><div class="bar-chart"><span style="--v:68%">User adoption</span><span style="--v:35%">Data migration</span><span style="--v:42%">Vendor control</span><span style="--v:48%">Integration</span><span style="--v:76%">Security</span></div></div>
+      <div class="glass chart-card"><h3>Risk Identification Quality</h3><div class="donut" aria-label="Risk identification quality chart"><b>40%</b><small>Appropriate</small></div><p>Only four of ten original risks were clearly appropriate; several high-impact risks were missed, underestimated, or too broad for targeted mitigation.</p></div>
+      <div class="glass chart-card wide"><h3>Escalation Thresholds</h3><div class="thresholds donut-thresholds">
+        <div class="threshold-donut" style="--pct:75%; --accent: var(--red)"><b>&lt;150</b><span>duplicates</span></div>
+        <div class="threshold-donut" style="--pct:70%; --accent: var(--yellow)"><b>&lt;70%</b><span>vendor capacity/engagement</span></div>
+        <div class="threshold-donut" style="--pct:10%; --accent: var(--orange)"><b>&gt;10%</b><span>integration failures</span></div>
+        <div class="threshold-donut" style="--pct:70%; --accent: var(--yellow)"><b>&lt;70%</b><span>trained physicians</span></div>
+        <div class="threshold-donut" style="--pct:100%; --accent: var(--green)"><b>&gt;0%</b><span>incidents</span></div>
+        <div class="threshold-donut" style="--pct:70%; --accent: var(--cyan)"><b>&lt;7/10</b><span>physician concerns</span></div>
+      </div></div>
+    </section>
+
+    <section id="monitoring" class="section-pad">
+      <div class="section-heading"><p class="eyebrow">Monitoring Analysis</p><h2>Monthly reports were not enough for fast-moving EHR risk.</h2></div>
+      <div class="cards two"><article class="glass"><h3>What went wrong</h3><ul><li>Warning signs such as duplicate records, interface failures, and vendor capacity constraints were not tracked as real-time indicators.</li><li>Escalation pathways were inconsistently applied, leaving the team to solve high-impact issues internally for too long.</li><li>Technical updates did not translate risk into operational effects for clinicians and executives.</li></ul></article><article class="glass"><h3>What to monitor next</h3><ul><li>Data migration error rates, manual cleanup effort, and legacy documentation gaps.</li><li>Vendor staffing commitments, sprint throughput, and custom report delivery progress.</li><li>Clinical readiness, medication workflow safety, uptime, interface stability, and audit readiness.</li></ul></article></div>
+    </section>
+
+    <section id="recommendations" class="section-pad">
+      <div class="section-heading"><p class="eyebrow">Recommendations</p><h2>Move from predictive-only risk management to adaptive, visible controls.</h2></div>
+      <div class="timeline">
+        <div class="glass step"><b>1</b><h3>Expand identification</h3><p>Engage frontline users, physicians, IT, compliance, and vendors through interviews, brainstorming, scenario workshops, checklists, and lessons-learned reviews.</p></div>
+        <div class="glass step"><b>2</b><h3>Audit early</h3><p>Mandate data quality assessments, legacy walkthroughs, and proof-of-concept migration before execution.</p></div>
+        <div class="glass step"><b>3</b><h3>Strengthen contracts</h3><p>Require enforceable vendor resource guarantees, capacity reporting, and pre-approved backup support.</p></div>
+        <div class="glass step"><b>4</b><h3>Automate escalation</h3><p>Trigger executive intervention when timeline delays exceed 10%, budget variance exceeds 10%, or operational thresholds are breached.</p></div>
+        <div class="glass step"><b>5</b><h3>Create CRIP coverage</h3><p>Use an ad hoc response team with the Integration Lead, Security Manager, and IT Director for incidents such as duplicated medical records.</p></div>
+      </div>
+    </section>
+
+    <section id="references" class="section-pad references glass"><h2>References</h2><p>McCarthy, N. K. (2012). <em>Computer incident response planning handbook</em>. Books24x7.</p><p>Raisinghani, M. S. (2025a). 9.1 Foundations of Information Systems Project Management. OpenStax.</p><p>Raisinghani, M. S. (2025b). 9.2 Setting up and Managing Projects for success. OpenStax.</p><p>Unit Assessment Resource. (2023). HealthConnect EHR Implementation Case Study. UMGC.</p></section>
+  </main>
+</body>
+</html>
