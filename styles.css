@@ -96,23 +96,22 @@
 
 .bar-chart span {
   position: relative;
-  z-index: 0;
-  isolation: isolate;
+  overflow: hidden;
+}
+
+.bar-chart span b {
+  position: relative;
+  z-index: 5;
   color: #ffffff !important;
   opacity: 1 !important;
-  font-weight: 1000 !important;
-  letter-spacing: 0.02em;
+  font-weight: 900 !important;
   text-shadow:
-    0 1px 0 #000,
-    0 2px 4px rgba(0, 0, 0, 1),
-    0 0 12px rgba(0, 0, 0, 1);
+    0 2px 3px rgba(0, 0, 0, 0.95),
+    0 0 8px rgba(0, 0, 0, 0.85);
 }
 
-.bar-chart span::before {
-  z-index: -1 !important;
-}
-
-/* Put the gradient fill behind the words */
-.bar-chart span::before {
-  z-index: -1 !important;
+/* Keep the gradient behind the label text */
+.bar-chart span::before,
+.bar-chart span::after {
+  z-index: 1;
 }
